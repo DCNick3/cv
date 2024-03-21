@@ -7,6 +7,7 @@ members = [
     "cv-pinhole",
     "cv-optimize",
     "cv-sfm",
+    "cv-sift",
     "akaze",
     "eight-point",
     "lambda-twist",
@@ -20,10 +21,10 @@ members = [
 ]
 
 [profile.dev]
-# The tests take a very long time without optimization.
-opt-level = 1
-# This is needed to reduce memory usage during compilation, or CI will fail
-codegen-units = 1
+## The tests take a very long time without optimization.
+#opt-level = 1
+## This is needed to reduce memory usage during compilation, or CI will fail
+#codegen-units = 1
 
 [profile.bench]
 # Necessary to generate flamegraphs

@@ -1,0 +1,38 @@
+[package]
+name = "cv-sift"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cv-core = { version = "0.15.0", path = "../cv-core" }
+image = { version = "0.24", default-features = false }
+log = { version = "0.4.14", default-features = false }
+#primal = { version = "0.3.0", default-features = false }
+derive_more = { version = "0.99.17", default-features = false }
+ndarray = { version = "0.15.4", default-features = false }
+float-ord = { version = "0.3.2", default-features = false }
+#space = "0.17.0"
+#bitarray = "0.9.0"
+thiserror = { version = "1.0.40", default-features = false }
+#wide = "0.7"
+serde = { version = "1.0", default-features = false, features = ["derive"], optional = true }
+rayon = { version = "1.7.0", optional = true }
+
+imageproc = "0.23.0"
+
+[dev-dependencies]
+image = "0.24"
+#eight-point = { version = "0.8.0", path = "../eight-point" }
+#cv-pinhole = { version = "0.6.0", path = "../cv-pinhole" }
+#arrsac = "0.10.0"
+#rand = "0.8.4"
+#rand_pcg = "0.3.1"
+#criterion = "0.3.5"
+#pretty_env_logger = "0.4.0"
+#bitarray = { version = "0.9.0", features = ["space"] }
+#imageproc = "0.23.0"
+
+[features]
+serde = ["dep:serde"]
